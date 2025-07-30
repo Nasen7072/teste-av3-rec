@@ -35,6 +35,11 @@ body {
   overflow: hidden;
 }
 
+/* Garante que todo texto seja visível */
+body * {
+  color: var(--cor-texto);
+}
+
 .background-animation {
   position: fixed;
   top: 0;
@@ -107,11 +112,16 @@ h1 {
   padding: 15px;
   border-radius: 8px;
   background-color: rgba(0, 0, 0, 0.1);
+  color: var(--cor-texto) !important;
+}
+
+.caixa-alternativas {
+  color: var(--cor-texto);
 }
 
 button {
   background-color: var(--cor-secundaria);
-  color: #ffffff;
+  color: #ffffff !important;
   border: none;
   border-radius: 12px;
   padding: 15px 25px;
@@ -141,7 +151,7 @@ button::before {
 
 button:hover {
   background-color: var(--cor-destaque);
-  color: var(--cor-principal);
+  color: var(--cor-principal) !important;
   transform: translateY(-3px);
   box-shadow: 0 7px 14px rgba(0, 0, 0, 0.2);
 }
@@ -155,12 +165,14 @@ button:hover::before {
   padding: 20px;
   border-radius: 8px;
   background-color: rgba(0, 0, 0, 0.1);
+  color: var(--cor-texto);
 }
 
 .texto-resultado {
   font-style: italic;
   line-height: 1.8;
   font-size: 18px;
+  color: var(--cor-texto) !important;
 }
 
 .hidden {
@@ -170,18 +182,16 @@ button:hover::before {
 #reiniciar {
   margin-top: 30px;
   background-color: var(--cor-destaque);
-  color: var(--cor-principal);
+  color: var(--cor-principal) !important;
 }
 
 #reiniciar:hover {
   background-color: var(--cor-secundaria);
-  color: white;
+  color: white !important;
 }
 
-/* Efeitos de terminal para o tema escuro */
+/* Efeitos para o tema escuro */
 [data-theme="dark"] .caixa-perguntas,
 [data-theme="dark"] .caixa-resultado {
   border-left: 3px solid var(--cor-destaque);
 }
-
-/* Removi as animações de digitação que podem causar problemas */
