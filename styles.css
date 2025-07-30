@@ -49,9 +49,9 @@ body {
 }
 
 @keyframes moveBackground {
-  0% { transform: scale(1) rotate(0deg); }
-  50% { transform: scale(1.2) rotate(2deg); }
-  100% { transform: scale(1) rotate(0deg); }
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
 }
 
 .caixa-principal {
@@ -80,6 +80,7 @@ body {
   cursor: pointer;
   color: var(--cor-destaque);
   transition: transform 0.3s;
+  padding: 5px;
 }
 
 .theme-toggle button:hover {
@@ -181,15 +182,6 @@ button:hover::before {
 [data-theme="dark"] .caixa-perguntas,
 [data-theme="dark"] .caixa-resultado {
   border-left: 3px solid var(--cor-destaque);
-  animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
 }
 
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: var(--cor-destaque) }
-}
+/* Removi as animações de digitação que podem causar problemas */
