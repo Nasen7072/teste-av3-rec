@@ -35,11 +35,6 @@ body {
   overflow: hidden;
 }
 
-/* Garante que todo texto seja visível */
-body * {
-  color: var(--cor-texto);
-}
-
 .background-animation {
   position: fixed;
   top: 0;
@@ -55,7 +50,7 @@ body * {
 
 @keyframes moveBackground {
   0% { transform: scale(1); }
-  50% { transform: scale(1.2); }
+  50% { transform: scale(1.1); }
   100% { transform: scale(1); }
 }
 
@@ -112,7 +107,7 @@ h1 {
   padding: 15px;
   border-radius: 8px;
   background-color: rgba(0, 0, 0, 0.1);
-  color: var(--cor-texto) !important;
+  color: var(--cor-texto);
 }
 
 .caixa-alternativas {
@@ -121,7 +116,7 @@ h1 {
 
 button {
   background-color: var(--cor-secundaria);
-  color: #ffffff !important;
+  color: white;
   border: none;
   border-radius: 12px;
   padding: 15px 25px;
@@ -138,26 +133,11 @@ button {
   overflow: hidden;
 }
 
-button::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-  transition: 0.5s;
-}
-
 button:hover {
   background-color: var(--cor-destaque);
-  color: var(--cor-principal) !important;
+  color: var(--cor-principal);
   transform: translateY(-3px);
   box-shadow: 0 7px 14px rgba(0, 0, 0, 0.2);
-}
-
-button:hover::before {
-  left: 100%;
 }
 
 .caixa-resultado {
@@ -172,7 +152,7 @@ button:hover::before {
   font-style: italic;
   line-height: 1.8;
   font-size: 18px;
-  color: var(--cor-texto) !important;
+  color: var(--cor-texto);
 }
 
 .hidden {
@@ -182,12 +162,12 @@ button:hover::before {
 #reiniciar {
   margin-top: 30px;
   background-color: var(--cor-destaque);
-  color: var(--cor-principal) !important;
+  color: var(--cor-principal);
 }
 
 #reiniciar:hover {
   background-color: var(--cor-secundaria);
-  color: white !important;
+  color: white;
 }
 
 /* Efeitos para o tema escuro */
