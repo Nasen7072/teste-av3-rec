@@ -1,3 +1,8 @@
+/* Adicione isto no início do seu CSS para debug */
+body {
+  background-color: red !important; /* Temporário - só para teste */
+}
+
 :root {
   /* Modo Escuro (Padrão) */
   --cor-fundo: #0a0a1a;
